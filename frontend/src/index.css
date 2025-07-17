@@ -207,6 +207,132 @@ tr.done:hover {
     box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
 }
 
+/* Form Labels */
+label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+label>input,
+label>textarea,
+label>select {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Select Styling */
+select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Error Messages */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background-color: #ffebee;
+    border-left: 4px solid #e74c3c;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Disabled Button */
+button:disabled {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+button:disabled:hover {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+    transform: none;
+    box-shadow: none;
+}
+
+/* Form Success State */
+.form-success {
+    color: #27ae60;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    padding: 8px 12px;
+    background-color: #e8f5e8;
+    border-left: 4px solid #27ae60;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Form Field Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Input with Icon */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    padding-left: 45px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+/* Textarea specific styling */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Form header */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
