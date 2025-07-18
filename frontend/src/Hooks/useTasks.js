@@ -36,8 +36,17 @@ export default function useTasks() {
     // Effettuare le operazioni necessarie per aggiornare un task
   };
 
-  const deleteTask = (taskId) => {
-    // Effettuare le operazioni necessarie per eliminare un task
+  const deleteTask = async (taskId) => {
+    const response = await fetch(`${VITE_API_URL}/tasks/${taskId}`, {
+      method: "DELETE",
+    });
+
+    const { success, message } = await response.json();
+
+    if (!success) throw new Error(message);
+
+    setTasks((prev) => prev.filter((task) => task.id !== taskId));
+    return message;
   };
 
   return { tasks, addTask, updateTask, deleteTask };
