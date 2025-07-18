@@ -333,6 +333,158 @@ textarea {
     font-size: 1.1rem;
 }
 
+/* Task Details Page */
+.task-details {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-details h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.task-detail-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+}
+
+.task-detail-item strong {
+    color: #2c3e50;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.task-detail-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.todo {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 2px solid #e74c3c;
+}
+
+.status-badge.doing {
+    background-color: #fff8e1;
+    color: #ef6c00;
+    border: 2px solid #f39c12;
+}
+
+.status-badge.done {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+    border: 2px solid #27ae60;
+}
+
+/* Task Actions */
+.task-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.2);
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(149, 165, 166, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #7f8c8d 0%, #6c7b7d 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(149, 165, 166, 0.3);
+}
+
+/* Task Not Found */
+.task-not-found {
+    text-align: center;
+    padding: 50px 20px;
+    color: #7f8c8d;
+}
+
+.task-not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.task-not-found p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Task Detail Animation */
+.task-details-container {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -380,6 +532,31 @@ textarea {
 
     button {
         padding: 12px 20px;
+    }
+
+    .task-details {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .task-detail-item {
+        padding: 12px;
+    }
+
+    .task-detail-item strong {
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+
+    .task-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-danger,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
