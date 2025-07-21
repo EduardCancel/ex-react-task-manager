@@ -507,9 +507,11 @@ textarea {
     max-width: 500px;
     width: 90%;
     max-height: 80vh;
+    overflow-y: auto;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     position: relative;
     animation: slideIn 0.3s ease-out;
+    backdrop-filter: blur(5px);
 }
 
 .modal h2 {
@@ -518,6 +520,9 @@ textarea {
     font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
+    border-bottom: 2px solid #f1f2f6;
+    padding-bottom: 15px;
+}
 }
 
 .modal p {
@@ -526,6 +531,93 @@ textarea {
     line-height: 1.6;
     margin-bottom: 30px;
     text-align: center;
+}
+
+.modal-content {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Stili per il form all'interno del modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.modal-content form input:focus,
+.modal-content form textarea:focus,
+.modal-content form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Stili aggiuntivi per il textarea nel modal */
+.modal-content form textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Stili per le opzioni del select */
+.modal-content form select {
+    cursor: pointer;
+    background-color: white;
+    background-image: linear-gradient(45deg, transparent 50%, #667eea 50%),
+        linear-gradient(135deg, #667eea 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    appearance: none;
+    padding-right: 40px;
+}
+
+/* Hover effects per gli input del modal */
+.modal-content form input:hover,
+.modal-content form textarea:hover,
+.modal-content form select:hover {
+    border-color: #667eea;
+    transition: all 0.2s ease;
+}
+
+/* Stili per input validi */
+.modal-content form input:valid,
+.modal-content form textarea:valid,
+.modal-content form select:valid {
+    border-color: #27ae60;
+}
+
+/* Stili per la transizione degli input */
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form select {
+    transition: all 0.2s ease-in-out;
 }
 
 .modal-actions {
@@ -619,6 +711,17 @@ textarea {
 
     .modal p {
         font-size: 1rem;
+    }
+
+    .modal-content {
+        font-size: 1rem;
+    }
+
+    .modal-content form input,
+    .modal-content form textarea,
+    .modal-content form select {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 
     .modal-actions {
