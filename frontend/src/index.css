@@ -523,7 +523,6 @@ textarea {
     border-bottom: 2px solid #f1f2f6;
     padding-bottom: 15px;
 }
-}
 
 .modal p {
     color: #555;
@@ -566,6 +565,8 @@ textarea {
     font-size: 1rem;
     margin-bottom: 0;
     margin-top: 0;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
 }
 
 .modal-content form input:focus,
@@ -603,7 +604,6 @@ textarea {
 .modal-content form textarea:hover,
 .modal-content form select:hover {
     border-color: #667eea;
-    transition: all 0.2s ease;
 }
 
 /* Stili per input validi */
@@ -611,13 +611,6 @@ textarea {
 .modal-content form textarea:valid,
 .modal-content form select:valid {
     border-color: #27ae60;
-}
-
-/* Stili per la transizione degli input */
-.modal-content form input,
-.modal-content form textarea,
-.modal-content form select {
-    transition: all 0.2s ease-in-out;
 }
 
 .modal-actions {
@@ -696,45 +689,6 @@ textarea {
     cursor: default;
 }
 
-/* Responsive Modal */
-@media (max-width: 768px) {
-    .modal {
-        margin: 20px;
-        padding: 25px;
-        max-width: none;
-        width: calc(100% - 40px);
-    }
-
-    .modal h2 {
-        font-size: 1.3rem;
-    }
-
-    .modal p {
-        font-size: 1rem;
-    }
-
-    .modal-content {
-        font-size: 1rem;
-    }
-
-    .modal-content form input,
-    .modal-content form textarea,
-    .modal-content form select {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    .modal-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .modal-actions button {
-        min-width: 100%;
-        padding: 12px 20px;
-    }
-}
-
 /* Modal Focus Styles */
 .modal-actions button:focus {
     outline: none;
@@ -763,6 +717,8 @@ textarea {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    /* General Responsive Styles */
     body {
         padding: 10px;
     }
@@ -810,6 +766,44 @@ textarea {
         padding: 12px 20px;
     }
 
+    /* Modal Responsive Styles */
+    .modal {
+        margin: 20px;
+        padding: 25px;
+        max-width: none;
+        width: calc(100% - 40px);
+    }
+
+    .modal h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal p {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        font-size: 1rem;
+    }
+
+    .modal-content form input,
+    .modal-content form textarea,
+    .modal-content form select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions button {
+        min-width: 100%;
+        padding: 12px 20px;
+    }
+
+    /* Task Details Responsive */
     .task-details {
         margin: 10px;
         padding: 20px;
